@@ -1,0 +1,10 @@
+.venv/
+*.db
+*.db-*
+connection.json
+test/cookie.txt
+test/csrf.txt
+test/login_response.txt
+__pycache__/
+*.pyc
+.DS_Store
