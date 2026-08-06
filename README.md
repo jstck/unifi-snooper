@@ -22,7 +22,13 @@ cp connection.json.example connection.json
 }
 ```
 
-The script always runs under the project `.venv` (it re-execs into it if needed).
+The script always runs under the project `.venv` (it re-execs into it if needed). Keep `connection.json` mode `600` so only your user can read the password.
+
+## UniFi account
+
+Prefer a dedicated local controller account for this tool (e.g. `logreader`) instead of your admin login.
+
+Create a **local** UniFi OS user with **view-only** access to **Network**, and no other apps/roles. That is enough for login plus the `stat/rogueap` fetch; it avoids giving some script write access to the controller.
 
 ## Usage
 
